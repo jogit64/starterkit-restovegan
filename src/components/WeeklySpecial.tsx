@@ -31,9 +31,12 @@ const WeeklySpecial = () => {
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-3xl font-bold text-peach-600">16€</span>
-                <button className="bg-sage-600 hover:bg-sage-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105">
-                  Commander
-                </button>
+                <a 
+                  href="#menu"
+                  className="bg-sage-600 hover:bg-sage-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105"
+                >
+                  Voir le menu
+                </a>
               </div>
             </div>
           </div>
