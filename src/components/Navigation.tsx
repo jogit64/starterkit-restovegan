@@ -54,9 +54,12 @@ const Navigation = () => {
 
           {/* Bouton réservation */}
           <div className="hidden md:block">
-            <button className="bg-peach-500 hover:bg-peach-600 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105">
+            <a
+              href="#infos"
+              className="bg-peach-500 hover:bg-peach-600 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105"
+            >
               Réserver
-            </button>
+            </a>
           </div>
 
           {/* Bouton menu mobile */}
@@ -90,9 +93,13 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <button className="w-full mt-4 bg-peach-500 hover:bg-peach-600 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300">
+              <a
+                href="#infos"
+                className="block w-full mt-4 bg-peach-500 hover:bg-peach-600 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 text-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Réserver
-              </button>
+              </a>
             </div>
           </div>
         )}
