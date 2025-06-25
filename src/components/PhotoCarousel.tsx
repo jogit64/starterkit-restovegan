@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 const PhotoCarousel = () => {
@@ -88,7 +87,7 @@ const PhotoCarousel = () => {
           </div>
 
           {/* Miniatures */}
-          <div className="grid grid-cols-6 gap-2 mt-8 lg:gap-4">
+          <div className="grid grid-cols-7 gap-2 mt-8 lg:gap-4">
             {photos.map((photo, index) => (
               <button
                 key={index}
