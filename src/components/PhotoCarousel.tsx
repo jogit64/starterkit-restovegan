@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 const PhotoCarousel = () => {
@@ -29,7 +28,7 @@ const PhotoCarousel = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-sage-50">
+    <section id="photos" className="py-20 bg-gradient-to-b from-white to-sage-50">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-cursive font-bold text-sage-800 mb-4">

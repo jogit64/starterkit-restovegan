@@ -26,15 +26,13 @@ const Navigation = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-white/95 backdrop-blur-lg shadow-lg' 
-        : 'bg-transparent'
+        : 'bg-white/90 backdrop-blur-md shadow-sm'
     }`}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className={`text-2xl font-cursive font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-sage-800' : 'text-white'
-            }`}>
+            <h1 className="text-2xl font-cursive font-bold text-sage-800">
               Restaurant Végétal
             </h1>
           </div>
@@ -46,9 +44,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`px-3 py-2 text-sm font-medium transition-colors duration-300 hover:text-peach-500 ${
-                    isScrolled ? 'text-sage-700' : 'text-white'
-                  }`}
+                  className="px-3 py-2 text-sm font-medium text-sage-700 hover:text-peach-500 transition-colors duration-300"
                 >
                   {item.name}
                 </a>
@@ -67,9 +63,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2 rounded-md transition-colors duration-300 ${
-                isScrolled ? 'text-sage-800' : 'text-white'
-              }`}
+              className="p-2 rounded-md text-sage-800 transition-colors duration-300"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMobileMenuOpen ? (
