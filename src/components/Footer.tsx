@@ -129,7 +129,7 @@ const Footer = () => {
               <a href="#" className="hover:text-sage-800 transition-colors duration-300">
                 Politique de confidentialité
               </a>
-              <a href="https://johannr.fr" className="hover:text-sage-800 transition-colors duration-300 font-medium">
+              <a href="https://johannr.fr" target="_blank" rel="noopener noreferrer" className="hover:text-sage-800 transition-colors duration-300 font-medium">
                 Site propulsé par johannr.fr
               </a>
             </div>
