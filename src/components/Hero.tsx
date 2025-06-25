@@ -39,7 +39,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/20 to-white/60 z-10 rounded-3xl"></div>
             <div className="aspect-[4/5] bg-gradient-to-br from-sage-200 to-peach-200 rounded-3xl shadow-2xl overflow-hidden">
               <img 
-                src="/lovable-uploads/785a512b-cc79-4682-82dc-e9fc45f8aaad.png"
+                src="/lovable-uploads/54705562-5fa3-423c-9bfd-35f90c2a6a3e.png"
                 alt="Devanture du restaurant"
                 className="w-full h-full object-cover opacity-90"
               />
