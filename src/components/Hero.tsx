@@ -19,12 +19,18 @@ const Hero = () => {
               dans le respect de la nature et de vos papilles.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105">
+              <a 
+                href="#menu" 
+                className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 text-center"
+              >
                 Découvrir le menu
-              </button>
-              <button className="border-2 border-peach-400 text-peach-600 hover:bg-peach-50 px-8 py-4 rounded-full text-lg font-medium transition-all duration-300">
+              </a>
+              <a 
+                href="#infos" 
+                className="border-2 border-peach-400 text-peach-600 hover:bg-peach-50 px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 text-center"
+              >
                 Réserver une table
-              </button>
+              </a>
             </div>
           </div>
           
