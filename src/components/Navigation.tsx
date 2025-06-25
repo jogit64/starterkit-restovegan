@@ -44,7 +44,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="px-3 py-2 text-sm font-medium text-sage-700 hover:text-peach-500 transition-colors duration-300"
+                  className="px-3 py-2 text-sm font-nunito font-medium text-sage-700 hover:text-peach-500 transition-colors duration-300"
                 >
                   {item.name}
                 </a>
@@ -56,7 +56,7 @@ const Navigation = () => {
           <div className="hidden md:block">
             <a
               href="#infos"
-              className="bg-peach-500 hover:bg-peach-600 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105"
+              className="bg-peach-500 hover:bg-peach-600 text-white px-6 py-2 rounded-full text-sm font-nunito font-medium transition-all duration-300 transform hover:scale-105"
             >
               Réserver
             </a>
@@ -87,7 +87,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-sage-700 hover:text-peach-500 hover:bg-sage-50 rounded-md text-base font-medium transition-colors duration-300"
+                  className="block px-3 py-2 text-sage-700 hover:text-peach-500 hover:bg-sage-50 rounded-md text-base font-nunito font-medium transition-colors duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -95,7 +95,7 @@ const Navigation = () => {
               ))}
               <a
                 href="#infos"
-                className="block w-full mt-4 bg-peach-500 hover:bg-peach-600 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 text-center"
+                className="block w-full mt-4 bg-peach-500 hover:bg-peach-600 text-white px-6 py-2 rounded-full text-sm font-nunito font-medium transition-colors duration-300 text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Réserver

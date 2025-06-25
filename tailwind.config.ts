@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -140,6 +139,7 @@ export default {
 			},
 			fontFamily: {
 				cursive: ['Dancing Script', 'cursive'],
+				nunito: ['Nunito', 'sans-serif'],
 			}
 		}
 	},
