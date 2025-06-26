@@ -1,4 +1,3 @@
-// api/plat-du-jour.ts
 export default async function handler(req: any, res: any) {
   const NOTION_API_KEY = process.env.NOTION_API_KEY;
   const DATABASE_ID = process.env.NOTION_DB_ID;
@@ -18,15 +17,19 @@ export default async function handler(req: any, res: any) {
           "Notion-Version": "2022-06-28",
         },
         body: JSON.stringify({
-          page_size: 1,
-          sorts: [{ property: "Date", direction: "descending" }],
+          page_size: 1, // test sans "sorts"
         }),
       }
     );
 
     const data = await result.json();
+
+    // pour debug : log dans Vercel
+    console.log("data", JSON.stringify(data, null, 2));
+
     return res.status(200).json(data);
   } catch (err) {
+    console.error("Fetch failed", err);
     return res
       .status(500)
       .json({ error: "Notion request failed", detail: err });
