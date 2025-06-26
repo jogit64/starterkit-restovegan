@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/plat-du-jour.ts": {
-      "runtime": "edge"
+      "runtime": "nodejs18.x"
     }
   },
   "routes": [
