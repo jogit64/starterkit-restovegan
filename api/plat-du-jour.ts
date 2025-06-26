@@ -1,4 +1,4 @@
-export default async function handler(req: any, res: any) {
+module.exports = async function handler(req, res) {
   const NOTION_API_KEY = process.env.NOTION_API_KEY;
   const DATABASE_ID = process.env.NOTION_DB_ID;
 
@@ -34,4 +34,4 @@ export default async function handler(req: any, res: any) {
       .status(500)
       .json({ error: "Notion request failed", detail: err.message || err });
   }
-}
+};
