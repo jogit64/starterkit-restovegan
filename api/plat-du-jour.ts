@@ -1,14 +1,17 @@
-module.exports = async function handler(req, res) {
+// api/plat-du-jour.ts
+
+export default async function handler(req: Request): Promise<Response> {
   const NOTION_API_KEY = process.env.NOTION_API_KEY;
   const DATABASE_ID = process.env.NOTION_DB_ID;
 
   if (!NOTION_API_KEY || !DATABASE_ID) {
-    console.error("❌ Clés manquantes :", { NOTION_API_KEY, DATABASE_ID });
-    return res.status(500).json({ error: "Missing env variables" });
+    return new Response(JSON.stringify({ error: "Missing env variables" }), {
+      status: 500,
+    });
   }
 
   try {
-    const notionResponse = await fetch(
+    const result = await fetch(
       `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
       {
         method: "POST",
@@ -19,19 +22,26 @@ module.exports = async function handler(req, res) {
         },
         body: JSON.stringify({
           page_size: 1,
+          sorts: [{ property: "Date", direction: "descending" }],
         }),
       }
     );
 
-    const data = await notionResponse.json();
+    const data = await result.json();
 
-    console.log("✅ Notion API response:", JSON.stringify(data, null, 2));
-
-    return res.status(200).json(data);
+    return new Response(JSON.stringify(data), {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   } catch (err: any) {
-    console.error("❌ Notion API fetch failed:", err);
-    return res
-      .status(500)
-      .json({ error: "Notion request failed", detail: err.message || err });
+    return new Response(
+      JSON.stringify({
+        error: "Notion request failed",
+        detail: err.message || err,
+      }),
+      { status: 500 }
+    );
   }
-};
+}
