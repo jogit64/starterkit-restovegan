@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/plat-du-jour.ts": {
+      "runtime": "edge"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/plat-du-jour",
+      "dest": "api/plat-du-jour.ts"
+    }
+  ]
+}
