@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/**/*.cjs": {
+      "runtime": "vercel-node@4.0.0"
+    }
+  }
+}
