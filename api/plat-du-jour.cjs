@@ -1,10 +1,14 @@
-// api/plat-du-jour.ts
+// api/plat-du-jour.cjs
 
-import type { VercelRequest, VercelResponse } from "@vercel/node";
+/**
+ * Handler CommonJS pour Vercel Node.js
+ */
+module.exports = async function (req, res) {
+  const NOTION_API_KEY = process.env.NOTION_API_KEY;
+  const NOTION_DB_ID = process.env.NOTION_DB_ID;
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
-  const { NOTION_API_KEY, NOTION_DB_ID } = process.env;
   if (!NOTION_API_KEY || !NOTION_DB_ID) {
+    console.error("❌ Clés manquantes :", { NOTION_API_KEY, NOTION_DB_ID });
     return res
       .status(500)
       .json({ error: "Missing NOTION_API_KEY or NOTION_DB_ID" });
@@ -25,14 +29,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     );
 
     if (!notionRes.ok) {
-      throw new Error(`Notion responded ${notionRes.status}`);
+      throw new Error(`Notion API responded ${notionRes.status}`);
     }
 
     const data = await notionRes.json();
     return res.status(200).json(data);
-  } catch (err: any) {
+  } catch (err) {
+    console.error("❌ Notion request failed:", err);
     return res
       .status(500)
       .json({ error: "Notion request failed", detail: err.message });
   }
-}
+};
