@@ -1,14 +1,13 @@
-// vercel.json à la racine
 {
   "builds": [
+    {
+      "src": "api/**/*.cjs",
+      "use": "@vercel/node"
+    },
     {
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": { "distDir": "dist" }
-    },
-    {
-      "src": "api/**/*.cjs",
-      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -18,6 +17,10 @@
     },
     {
       "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
