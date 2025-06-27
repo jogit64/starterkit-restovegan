@@ -1,7 +1,23 @@
+// vercel.json à la racine
 {
-  "functions": {
-    "api/**/*.cjs": {
-      "runtime": "vercel-node@4.0.0"
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    },
+    {
+      "src": "api/**/*.cjs",
+      "use": "@vercel/node"
     }
-  }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1.cjs"
+    },
+    {
+      "handle": "filesystem"
+    }
+  ]
 }
