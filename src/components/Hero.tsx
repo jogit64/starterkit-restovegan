@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from "react";
 
 const Hero = () => {
   return (
@@ -15,31 +14,31 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-sage-600 mb-8 leading-relaxed">
-              Une cuisine végétalienne généreuse, préparée avec des produits bio et locaux, 
-              dans le respect de la nature et de vos papilles.
+              Une cuisine végétalienne généreuse, préparée avec des produits bio
+              et locaux, dans le respect de la nature et de vos papilles.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="#menu" 
+              <a
+                href="#menu"
                 className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 text-center"
               >
                 Découvrir le menu
               </a>
-              <a 
-                href="#infos" 
+              <a
+                href="#infos"
                 className="border-2 border-peach-400 text-peach-600 hover:bg-peach-50 px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 text-center"
               >
                 Réserver une table
               </a>
             </div>
           </div>
-          
+
           {/* Image avec effet de fondu */}
           <div className="relative lg:ml-12 animate-fade-in">
             <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/20 to-white/60 z-10 rounded-3xl"></div>
             <div className="aspect-[4/5] bg-gradient-to-br from-sage-200 to-peach-200 rounded-3xl shadow-2xl overflow-hidden">
-              <img 
-                src="/lovable-uploads/54705562-5fa3-423c-9bfd-35f90c2a6a3e.png"
+              <img
+                src="/lovable-uploads/devanture.png"
                 alt="Devanture du restaurant"
                 className="w-full h-full object-cover opacity-90"
               />
@@ -50,7 +49,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Indicateur de scroll */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-sage-400 rounded-full flex justify-center">
